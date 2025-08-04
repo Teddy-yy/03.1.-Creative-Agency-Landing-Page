@@ -640,34 +640,38 @@ a{
 .process__step-inner{
     display: flex;
     align-items: center;
-    padding: 46px 41px 0 20px;
+    padding: 60px 41px 25px 20px;
 }
 
-.process__step:nth-child(1){
+.process__step:hover{
     position: relative;
-    padding-top: 54px;
-    padding-bottom: 54px;
+    height: 185px;
     background: var(--secondary-color-light-green);
     border-radius: 33px;
-    border: none;
+    transition: .25s;
+    cursor: pointer;
 }
 
-.process__step:nth-child(1) .process__step-inner{
-    padding: 0 0 0 20px;
-}
-
-.process__step:nth-child(1) .process__step-content{
-    display: block;
+.process__step:hover .process__step-desc,
+.process__step:hover .process__bottom-line{
+    display: none;
+    transition: .25s;
 }
 
 .process__step-link{
-    display: inline-block;
+    position: absolute;
+    display: none;
     margin-top: 22px;
     color: var(--text-color-black-gray);
     text-decoration: underline;
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1; /* 100% */
+}
+
+.process__step:hover .process__step-link{
+    display: inline-block;
+    transition: .25s;
 }
 
 .process__step-link:hover{
